@@ -13,12 +13,12 @@ namespace MarinaProject.Models
         public double Amount { get; set; }
         
         [Required(ErrorMessage = "Please pick start date.")]
-        [Column(TypeName = "Date")]
-        public DateOnly startDate { get; set; }
+        [Column(TypeName = "int")]
+        public int startDate { get; set; }
         
         [Required(ErrorMessage = "Please enter end date.")]
-        [Column(TypeName = "Date")]
-        public DateOnly endDate { get; set; }
+        [Column(TypeName = "int")]
+        public int endDate { get; set; }
 
 
 

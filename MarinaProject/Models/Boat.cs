@@ -6,7 +6,7 @@ namespace MarinaProject.Models
     public class Boat
     {
         public int BoatId { get; set; }
-        public int CustomerId { get; set; }
+        
 
         [Required(ErrorMessage = "Please enter the type of Boat you have.")]
         [Column(TypeName = "int(10)")]
