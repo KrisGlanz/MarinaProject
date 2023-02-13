@@ -9,15 +9,15 @@ namespace MarinaProject.Models
         
 
         [Required(ErrorMessage = "Please enter the type of Boat you have.")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int BoatType { get; set; }
 
         [Required(ErrorMessage = "Please enter the registration number.")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int Registration { get; set; }
 
         [Required(ErrorMessage = "Please enter your boat's length.")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int BoatLength { get; set; }
 
         [Required(ErrorMessage = "Please enter your boat's manufacturer.")]

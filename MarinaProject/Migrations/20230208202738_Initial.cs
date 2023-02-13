@@ -57,9 +57,9 @@ namespace MarinaProject.Migrations
                     BoatId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CustomerId = table.Column<int>(type: "int", nullable: false),
-                    BoatType = table.Column<int>(type: "int(10)", nullable: false),
-                    Registration = table.Column<int>(type: "int(10)", nullable: false),
-                    BoatLength = table.Column<int>(type: "int(10)", nullable: false),
+                    BoatType = table.Column<int>(type: "int", nullable: false),
+                    Registration = table.Column<int>(type: "int", nullable: false),
+                    BoatLength = table.Column<int>(type: "int", nullable: false),
                     Manufacturer = table.Column<string>(type: "varchar(75)", nullable: false)
                 },
                 constraints: table =>
@@ -76,7 +76,7 @@ namespace MarinaProject.Migrations
                     firstName = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     lastName = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     address = table.Column<string>(type: "nvarchar(250)", nullable: false),
-                    phoneNum = table.Column<int>(type: "int(10)", nullable: false),
+                    phoneNum = table.Column<int>(type: "int", nullable: false),
                     leaseType = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -105,7 +105,7 @@ namespace MarinaProject.Migrations
                 {
                     leaseId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Amount = table.Column<double>(type: "double", nullable: false),
+                    Amount = table.Column<decimal>(type: "decimal", nullable: false),
                     startDate = table.Column<int>(type: "int", nullable: false),
                     endDate = table.Column<int>(type: "int", nullable: false)
                 },

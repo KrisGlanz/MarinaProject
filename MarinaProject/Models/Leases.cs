@@ -9,7 +9,7 @@ namespace MarinaProject.Models
         public int leaseId { get; set; }
 
         [Required(ErrorMessage = "")]
-        [Column(TypeName = "double")]
+        [Column(TypeName = "decimal")]
         public double Amount { get; set; }
         
         [Required(ErrorMessage = "Please pick start date.")]

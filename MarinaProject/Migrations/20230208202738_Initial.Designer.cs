@@ -34,10 +34,10 @@ namespace MarinaProject.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BoatId"));
 
                     b.Property<int>("BoatLength")
-                        .HasColumnType("int(10)");
+                        .HasColumnType("int");
 
                     b.Property<int>("BoatType")
-                        .HasColumnType("int(10)");
+                        .HasColumnType("int");
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
@@ -47,7 +47,7 @@ namespace MarinaProject.Migrations
                         .HasColumnType("varchar(75)");
 
                     b.Property<int>("Registration")
-                        .HasColumnType("int(10)");
+                        .HasColumnType("int");
 
                     b.HasKey("BoatId");
 
@@ -79,7 +79,7 @@ namespace MarinaProject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("phoneNum")
-                        .HasColumnType("int(10)");
+                        .HasColumnType("int");
 
                     b.HasKey("customerId");
 
@@ -117,8 +117,8 @@ namespace MarinaProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("leaseId"));
 
-                    b.Property<double>("Amount")
-                        .HasColumnType("double");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal");
 
                     b.Property<int>("endDate")
                         .HasColumnType("int");

@@ -21,7 +21,7 @@ namespace MarinaProject.Models
         public string address { get; set; }
 
         [Required(ErrorMessage = "Please enter phone number.")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int phoneNum { get; set; }
 
         public string leaseType { get; set; }
