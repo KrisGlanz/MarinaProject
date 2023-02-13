@@ -8,11 +8,11 @@ namespace MarinaProject.Models
         public AnnualLease() { }
 
         [Required(ErrorMessage = "Please enter monthly pay rate.")]
-        [Column(TypeName = "double")]
+        [Column(TypeName = "decimal")]
         public double monthlyPay { get; set; }
 
         [Required(ErrorMessage = "Please enter balance due.")]
-        [Column(TypeName = "double")]
+        [Column(TypeName = "decimal")]
         public double balanceDue { get; set; }
 
     }

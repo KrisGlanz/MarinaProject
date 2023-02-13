@@ -6,11 +6,11 @@ namespace MarinaProject.Models
     public class SailBoat:Boat
     {
         [Required(ErrorMessage = "Please enter the keel depth.")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int KneelDepth { get; set; }
 
         [Required(ErrorMessage = "Please enter the number of sails.")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int NumberOfSails { get; set; }
 
         [Required(ErrorMessage = "Please enter the type of motor.")]

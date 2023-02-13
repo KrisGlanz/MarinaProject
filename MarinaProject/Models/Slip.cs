@@ -9,10 +9,10 @@ namespace MarinaProject.Models
         
         public int slipId { get; set; }
         [Required(ErrorMessage = "Please enter width. ")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int width { get; set; }
         [Required(ErrorMessage = "Please enter slip length. ")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int slipLength { get; set; }
 
     }

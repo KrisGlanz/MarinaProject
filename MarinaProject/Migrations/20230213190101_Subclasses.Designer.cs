@@ -4,6 +4,7 @@ using MarinaProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MarinaProject.Migrations
 {
     [DbContext(typeof(MarinaDBContext))]
-    partial class MarinaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230213190101_Subclasses")]
+    partial class Subclasses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,25 +142,6 @@ namespace MarinaProject.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Leases");
 
                     b.UseTphMappingStrategy();
-                });
-
-            modelBuilder.Entity("MarinaProject.Models.Slip", b =>
-                {
-                    b.Property<int>("slipId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("slipId"));
-
-                    b.Property<int>("slipLength")
-                        .HasColumnType("int");
-
-                    b.Property<int>("width")
-                        .HasColumnType("int");
-
-                    b.HasKey("slipId");
-
-                    b.ToTable("Slips");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -372,6 +356,20 @@ namespace MarinaProject.Migrations
                     b.HasDiscriminator().HasValue("PowerBoat");
                 });
 
+            modelBuilder.Entity("MarinaProject.Models.RowBoat", b =>
+                {
+                    b.HasBaseType("MarinaProject.Models.Boat");
+
+                    b.Property<string>("Motor")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)");
+
+                    b.Property<int>("NumberOfRowers")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("RowBoat");
+                });
+
             modelBuilder.Entity("MarinaProject.Models.SailBoat", b =>
                 {
                     b.HasBaseType("MarinaProject.Models.Boat");
@@ -393,11 +391,11 @@ namespace MarinaProject.Migrations
                 {
                     b.HasBaseType("MarinaProject.Models.Leases");
 
-                    b.Property<decimal>("balanceDue")
-                        .HasColumnType("decimal");
+                    b.Property<double>("balanceDue")
+                        .HasColumnType("double");
 
-                    b.Property<decimal>("monthlyPay")
-                        .HasColumnType("decimal");
+                    b.Property<double>("monthlyPay")
+                        .HasColumnType("double");
 
                     b.HasDiscriminator().HasValue("AnnualLease");
                 });

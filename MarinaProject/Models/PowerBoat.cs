@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MarinaProject.Models
 {
-    public class PowerBoat:Boat
+    public class PowerBoat : Boat
     {
         [Required(ErrorMessage = "Please enter the number of engines.")]
-        [Column(TypeName = "int(10)")]
+        [Column(TypeName = "int")]
         public int NumberOfEngines { get; set; }
 
         [Required(ErrorMessage = "Please enter the Fuel Type.")]
