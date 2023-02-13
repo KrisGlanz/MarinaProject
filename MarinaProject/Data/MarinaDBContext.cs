@@ -14,6 +14,8 @@ namespace MarinaProject.Data
         public DbSet<PowerBoat> PowerBoats { get; set; }
         public DbSet<SailBoat> SailBoats { get; set; }
         public DbSet<Slip> Slips { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
 
 
         public MarinaDBContext(DbContextOptions<MarinaDBContext> options)
