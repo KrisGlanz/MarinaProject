@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MarinaProject.Models.Boat>
+﻿@model IEnumerable<MarinaProject.Models.SailBoat>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,14 +7,20 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Add Boat</a>
-    <a asp-controller="PowerBoats" asp-action="Index">Show PowerBoats</a>
-    <a asp-controller="SailBoats" asp-action="Index">Show SailBoats</a>
-    <a asp-controller="RowBoats" asp-action="Index">Show RowBoats</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KneelDepth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfSails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MotorType)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.BoatType)
             </th>
@@ -33,6 +39,15 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KneelDepth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfSails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotorType)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.BoatType)
             </td>
