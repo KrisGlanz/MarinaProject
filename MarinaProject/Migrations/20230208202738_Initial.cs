@@ -54,7 +54,7 @@ namespace MarinaProject.Migrations
                 name: "Boats",
                 columns: table => new
                 {
-                    BoatId = table.Column<int>(type: "int", nullable: false)
+                    BoatId = table.Column<int>(type: "varchar(50)", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CustomerId = table.Column<int>(type: "int", nullable: false),
                     BoatType = table.Column<int>(type: "int", nullable: false),

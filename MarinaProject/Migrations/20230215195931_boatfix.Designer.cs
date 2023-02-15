@@ -4,6 +4,7 @@ using MarinaProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MarinaProject.Migrations
 {
     [DbContext(typeof(MarinaDBContext))]
-    partial class MarinaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230215195931_boatfix")]
+    partial class boatfix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,9 +39,6 @@ namespace MarinaProject.Migrations
                     b.Property<string>("BoatType")
                         .IsRequired()
                         .HasColumnType("varchar(75)");
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()

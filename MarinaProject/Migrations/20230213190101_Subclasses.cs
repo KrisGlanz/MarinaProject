@@ -60,7 +60,7 @@ namespace MarinaProject.Migrations
             migrationBuilder.AlterColumn<int>(
                 name: "BoatType",
                 table: "Boats",
-                type: "int",
+                type: "varchar(50)",
                 nullable: false,
                 oldClrType: typeof(int),
                 oldType: "int(10)");
