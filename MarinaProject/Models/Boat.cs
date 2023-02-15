@@ -7,8 +7,6 @@ namespace MarinaProject.Models
     {
         public int BoatId { get; set; }
 
-        public int CustomerId { get; set; }
-
         [Required(ErrorMessage = "Please enter the type of Boat you have.")]
         [Column(TypeName = "varchar(75)")]
         public string BoatType { get; set; }
