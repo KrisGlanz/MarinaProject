@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MarinaProject.Models
 {
-    public class SailBoat:Boat
+    public class SailBoat : Boat
     {
         [Required(ErrorMessage = "Please enter the keel depth.")]
         [Column(TypeName = "int")]

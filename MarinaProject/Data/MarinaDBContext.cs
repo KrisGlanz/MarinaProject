@@ -24,6 +24,10 @@ namespace MarinaProject.Data
 
         }
 
+
+
+        public DbSet<MarinaProject.Models.RowBoat> RowBoat { get; set; }
+
         
 
     }

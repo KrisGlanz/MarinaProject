@@ -11,7 +11,7 @@ namespace MarinaProject.Models
 
         [Required(ErrorMessage = "Please indicate weather you have a motor or not.")]
         [Column(TypeName = "varchar(10)")]
-        public int Motor { get; set; }
+        public string Motor { get; set; }
         /*Not sure on this a bit could be used here as 1 could be true 0 would be false something we can think about */
     }
 }
