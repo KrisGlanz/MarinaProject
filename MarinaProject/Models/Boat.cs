@@ -8,8 +8,8 @@ namespace MarinaProject.Models
         public int BoatId { get; set; }
 
         [Required(ErrorMessage = "Please enter the type of Boat you have.")]
-        [Column(TypeName = "int")]
-        public int BoatType { get; set; }
+        [Column(TypeName = "string")]
+        public string BoatType { get; set; }
 
         [Required(ErrorMessage = "Please enter the registration number.")]
         [Column(TypeName = "int")]
