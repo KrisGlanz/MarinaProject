@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MarinaProject.Models.Leases>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item"><a class="nav-link active" href="../Leases/Index">Leases</a></li>
+    <li class="nav-item"><a class="nav-link active" href="../DailyLeases/Index">Daily Leases</a></li>
+    <li class="nav-item"><a class="nav-link active" href="../AnnualLeases/Index">Annual Leases</a></li>
+</ul>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.startDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.endDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.startDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.endDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.leaseId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.leaseId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.leaseId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
